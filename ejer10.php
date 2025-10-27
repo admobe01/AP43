@@ -1,0 +1,36 @@
+<?php
+include "data.php";
+
+$request = $_GET['Plato'];
+$datos=[];
+$pais=[];
+$j=0;
+
+foreach($data as $datos){
+
+    if($datos["Favorites"] == $request){
+
+        $j++;
+        $existe=false;
+
+foreach($pais as $y){
+
+    if($y == $datos["Country"]){
+
+        $existe=true;
+        }
+}
+
+    if($existe == false){
+
+        $pais[]=$datos["Country"];
+        }
+    }
+}
+
+$z = implode(",", $pais);
+
+echo "Total people who like $request: $j";
+echo "<br><br><br> People's contries who like $request: $z";
+
+?>
