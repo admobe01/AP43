@@ -8,7 +8,8 @@ $array2 = explode(",", $array1);
 
 $array3=[];
 
-for($i=0;$i<count($array2);$i=$i+2){
+for($i=0;$i<count($array2);$i=$i+2)//hay que mirar porque el array salta un numero
+{
 
 
         $array[$i] = [ 'country' => $array2[$i+1], 'city' => $array2[$i]];
