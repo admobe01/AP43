@@ -1,7 +1,7 @@
 <?php
 include "data.php";
 
-$request = $_GET['Plato'];
+$request = $_GET['plato'];
 $datos=[];
 $pais=[];
 $j=0;
