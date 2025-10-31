@@ -8,8 +8,7 @@ $j=0;
 
 foreach($data as $datos){
 
-    if($datos["Favorites"] == $request){
-
+    if(str_contains($datos["Favorites"],$request)){
         $j++;
         $existe=false;
 
